@@ -39,7 +39,15 @@ int main()
   //pid.Init(0.15,0.0,2.5);
   //pid.Init(0.13,0.0002,3.05);
 
-  pid.Init(0.15, 0.0, 10.0);
+  //only P
+  //pid.Init(0.05, 0.0, 0.0);
+
+  //only PD
+  pid.Init(0.15, 0.0001, 12.0);
+
+  // PID
+  //pid.Init(0.15, 0.0, 0.0);
+
 
   //double prev_angle = 0 ; 
   //pid_throttle.Init(0.4, 0.0, 2.5);
