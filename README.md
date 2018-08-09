@@ -5,6 +5,15 @@ Self-Driving Car Engineer Nanodegree Program
 
 The goal of this project is to drive the car by controlling the steering wheel using a PID controller. The tune the PID parameters I used different configurations of Kp, Kd, and Ki. After observing the performance of the car, I came up with the following values of PID constants: Kp = 0.15, Kd= 10.0, Ki=0.0; 
 
+PID parameters selection:
+
+PID controller stands for  proportional–integral–derivative controller is a feedback loop controller to control a machine.
+The term P is proportional to the current value of the error (e.g., cross track error) at time T. The term D is a best estimate of the future trend of error, based on its current rate of change. The term I accounts for past values of the error and integrates them over time to produce the I term. Three constants Kp, Kd, Ki controllers the amount of P, D, and I  value need to consider into the system respectively. 
+
+
+For the selction of Kp, I started with the the 1.0 keeping the Kd and Ki value to zero (only P controller). I selected the value of 0.15 where the car was osciliating on the track. Then, I tune the Kd for PD controller to reduce the oscillation. The challaning task was to make the car turn properly in the curvature. Too much of P was creating oscciliaiotn and with too high D reducing the ossiclaition but pushing the car out of the track. Finally, I added a small amount of Ki to consider systematic bias. 
+
+
 ## Dependencies
 
 * cmake >= 3.5
